@@ -1,0 +1,50 @@
+@import '_setting.scss';
+
+.column{
+    flex: 0 0 auto;
+    width: 300px;
+    height: calc(100% - 2* #{gap});
+    margin: $gap;
+    &:not(:first-child){
+      margin-left: 0.5* $gap;
+    }
+    > * {
+      background-color: $list-bg-color;
+      color: #333;
+      padding: 0 8px;
+    }
+    header{
+      padding-left: 15px;
+      height: 36px;
+      line-height: 36px;
+      font-size: 16px;
+      font-weight: bold;
+      border-top-left-radius: $card-border-radius;
+      border-top-right-radius: $card-border-radius;
+    }
+    footer {
+      padding-left: 10px;
+      height: 36px;
+      line-height: 36px;
+      font-size: 14px;
+      border-bottom-left-radius: $card-border-radius;
+      border-bottom-right-radius: $card-border-radius;
+    }
+    ul.task-list {
+      list-style: none;
+      margin: 0;
+      max-height: calc(100% - #{$column-header-height} - #{$column-footer-height});
+      overflow-y: auto;
+      &::-webkit-scrollbar{
+        -webkit-appearance: none;
+      }
+      &::-webkit-scrollbar:vertical{
+        width: 10px;
+      }
+      &::-webkit-scrollbar-thumb{
+        background-color: darken($color: $list-bg-color, $amount: 13);
+        border-right: 5px $list-bg-color;
+      }
+
+    }
+  }
