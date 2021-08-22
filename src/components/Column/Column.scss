@@ -3,7 +3,7 @@
 .column{
     flex: 0 0 auto;
     width: 300px;
-    height: calc(100% - 2* #{gap});
+    height: calc(100% - #{gap});
     margin: $gap;
     &:not(:first-child){
       margin-left: 0.5* $gap;
@@ -30,7 +30,7 @@
       border-bottom-left-radius: $card-border-radius;
       border-bottom-right-radius: $card-border-radius;
     }
-    ul.task-list {
+    ul.card-list {
       list-style: none;
       margin: 0;
       max-height: calc(100% - #{$column-header-height} - #{$column-footer-height});
@@ -39,12 +39,11 @@
         -webkit-appearance: none;
       }
       &::-webkit-scrollbar:vertical{
-        width: 10px;
+        width: 8px;
       }
       &::-webkit-scrollbar-thumb{
         background-color: darken($color: $list-bg-color, $amount: 13);
         border-right: 5px $list-bg-color;
       }
-
     }
   }

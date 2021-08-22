@@ -1,6 +1,6 @@
 @import '_setting.scss';
 
-li.task-item {
+li.card-item {
     background-color: white;
     padding: $gap;
     border-radius: $card-border-radius;
@@ -8,11 +8,12 @@ li.task-item {
     &:not(:last-child){
       margin-bottom: 10px;
     }
-    img {
+
+    img.card-cover {
       display: block;
-      width: calc(100% + 2 * #{gap});
+      object-fit: cover;
+      width: calc(100% + 2* #{$gap});
       margin: -$gap 0 $gap (-$gap);
-      border-top-left-radius: $card-border-radius;
-      border-top-right-radius: $card-border-radius;
+      border-radius: $card-border-radius;
     }
   }
