@@ -12,9 +12,5 @@
 .trello-container {
   height: 100vh;
   background-color:$board-bg-color;
-  display: grid;
-  grid-template-rows: 40px 50px 1fr;
   line-height: 1.3em;
-
-
 }
