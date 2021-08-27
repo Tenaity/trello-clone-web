@@ -13,4 +13,9 @@
   height: 100vh;
   background-color:$board-bg-color;
   line-height: 1.3em;
+  color: $app-main-text-color;
+  .icon {
+    font-size: 14px;
+    margin-right: 5px;
+  }
 }
