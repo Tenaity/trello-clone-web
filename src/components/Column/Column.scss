@@ -31,6 +31,14 @@
       font-size: 14px;
       border-bottom-left-radius: $card-border-radius;
       border-bottom-right-radius: $card-border-radius;
+      color: #888;
+      .footer-actions{
+        cursor: pointer;
+        margin-left: 10px;
+        &:hover{
+          color:$app-main-text-color
+        }
+      }
     }
     .card-list {
       margin: 0;
@@ -47,10 +55,12 @@
         border-right: 5px $list-bg-color;
       }
       .card-ghost {
+        font-weight: 600;
         transition: transform 0.18s ease;
         transform: rotateZ(5deg)
       }
       .card-ghost-drop{
+        font-weight: 600;
         transition: transform 0.18s ease-in-out;
         transform: rotateZ(0deg)
       }
